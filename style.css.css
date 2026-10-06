@@ -1,0 +1,545 @@
+/* =========================
+   BASIC RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f5f0;
+    color: #171717;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 22px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #111111;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #c9a227;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 14px;
+    color: #eeeeee;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c9a227;
+}
+
+.nav-btn {
+    padding: 11px 20px;
+    border: 1px solid #c9a227;
+    color: #c9a227;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    background: #c9a227;
+    color: #111111;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    padding: 80px 7%;
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        linear-gradient(135deg, #292929, #111111);
+    color: white;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.small-title {
+    color: #c9a227;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #c9a227;
+}
+
+.hero-text {
+    max-width: 560px;
+    color: #dddddd;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.main-btn,
+.second-btn {
+    display: inline-block;
+    padding: 14px 25px;
+    transition: 0.3s;
+}
+
+.main-btn {
+    background: #c9a227;
+    color: #111111;
+    font-weight: bold;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    background: white;
+}
+
+.second-btn {
+    border: 1px solid white;
+    color: white;
+}
+
+.second-btn:hover {
+    background: white;
+    color: #111111;
+}
+
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+section {
+    padding: 90px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    color: #c9a227;
+    font-size: 15px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: 44px;
+    margin-top: 10px;
+}
+
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.category-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.category-card {
+    background: white;
+    padding-bottom: 25px;
+    transition: 0.3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.category-card:hover {
+    transform: translateY(-8px);
+}
+
+.category-image {
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.men-image {
+    background: linear-gradient(135deg, #333333, #777777);
+}
+
+.women-image {
+    background: linear-gradient(135deg, #7b4f50, #c88c8c);
+}
+
+.kids-image {
+    background: linear-gradient(135deg, #315a70, #76a8bd);
+}
+
+.category-card h3 {
+    font-size: 21px;
+    margin: 20px 20px 8px;
+}
+
+.category-card a {
+    margin-left: 20px;
+    color: #a17c0d;
+    font-weight: bold;
+}
+
+
+/* =========================
+   COLLECTION
+========================= */
+
+.collection {
+    background: #111111;
+    color: white;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product-card {
+    background: #1c1c1c;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-image {
+    height: 280px;
+    position: relative;
+    background: linear-gradient(135deg, #5555,#222222);}
+    .product-two {
+    background: linear-gradient(135deg, #b18b8b, #4d3030);
+}
+
+.product-three {
+    background: linear-gradient(135deg, #31495d, #111111);
+}
+
+.product-four {
+    background: linear-gradient(135deg, #9c8260, #392b1b);
+}
+
+.product-image span {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #c9a227;
+    color: #111111;
+    padding: 5px 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.product-info {
+    padding: 22px;
+}
+
+.product-info p {
+    color: #c9a227;
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.product-info h3 {
+    margin: 8px 0;
+    font-size: 22px;
+}
+
+.product-info h4 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.product-info a {
+    color: #c9a227;
+    font-size: 16px;
+}
+/* =========================
+   OFFER
+========================= */
+
+.offer {
+    text-align: center;
+    background: #c9a227;
+    color: #111111;
+}
+
+.offer-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.offer-content > p:first-child {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.offer h2 {
+    font-size: 65px;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.offer h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.offer .main-btn {
+    background: #111111;
+    color: white;
+    margin-top: 25px;
+}
+
+.offer .main-btn:hover {
+    background: white;
+    color: #111111;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    border: 1px solid #eeeeee;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-6px);
+    border-color: #c9a227;
+}
+
+.feature-icon {
+    font-size: 28px;
+    color: #c9a227;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #171717;
+    color: white;
+}
+
+.about-text {
+    max-width: 750px;
+}
+
+.about-text > p:first-child {
+    color: #c9a227;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.about h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin: 15px 0 25px;
+}
+
+.about-text p {
+    color: #cccccc;
+    margin-bottom: 18px;
+}
+
+.about .main-btn {
+    margin-top: 15px;
+}
+/* =========================
+   OFFER
+========================= */
+
+.offer {
+    text-align: center;
+    background: #c9a227;
+    color: #111111;
+}
+
+.offer-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.offer-content > p:first-child {
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+.offer h2 {
+    font-size: 65px;
+    line-height: 1;
+    margin: 15px 0;
+}
+
+.offer h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.offer .main-btn {
+    background: #111111;
+    color: white;
+    margin-top: 25px;
+}
+
+.offer .main-btn:hover {
+    background: white;
+    color: #111111;
+}
+
+
+/* =========================
+   WHY CHOOSE US
+========================= */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.feature {
+    background: white;
+    padding: 30px;
+    border: 1px solid #eeeeee;
+    transition: 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-6px);
+    border-color: #c9a227;
+}
+
+.feature-icon {
+    font-size: 28px;
+    color: #c9a227;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+    background: #171717;
+    color: white;
+}
+
+.about-text {
+    max-width: 750px;
+}
+
+.about-text > p:first-child {
+    color: #c9a227;
+    letter-spacing: 3px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.about h2 {
+    font-size: 55px;
+    line-height: 1.1;
+    margin: 15px 0 25px;
+}
+
+.about-text p {
+    color: #cccccc;
+    margin-bottom: 18px;
+}
+
+.about .main-btn {
+    margin-top: 15px;
+}
